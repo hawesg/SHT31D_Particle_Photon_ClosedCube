@@ -415,7 +415,7 @@ SHT31D_ErrorCode ClosedCube_SHT31D::read(uint16_t* data, uint8_t numOfPair)
 	}
 
 	for (counter = 0; counter < numOfPair; counter++) {
-		Wire.readBytes(buf, 2);
+		Wire.readBytes(buf, (uint8_t)2);
 		checksum = Wire.read();
 
 		if (checkCrc(buf, checksum) != 0)

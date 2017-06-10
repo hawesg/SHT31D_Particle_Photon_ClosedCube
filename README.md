@@ -12,3 +12,7 @@ This is breakout board for Sensirion SHT31-DIS Digital Humidity Sensors (RH/T)
 
 Note: The library supports SHT30 (low-cost) and SHT35 (high-end) sensor versions as well.
 
+---
+### Where to Buy?
+
+<a href="https://www.tindie.com/stores/closedcube/?ref=offsite_badges&utm_source=sellers_closedcube&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>

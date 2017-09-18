@@ -1,5 +1,5 @@
 ClosedCube Arduino Library for
-ClosedCube SHT31-D (SHT35 and SHT30) [Digital I2C] Humidity and Temperature Sensor Breakout 
+ClosedCube SHT31-D (SHT35 and SHT30) I2C Digital Humidity and Temperature Sensor Breakout 
 =====================================================================================================
 
 This is breakout board for Sensirion SHT31-DIS Digital Humidity Sensors (RH/T)

@@ -1,22 +1,21 @@
 /*
 
 This is example for SHT3X-DIS Digital Humidity & Temperature Sensors Arduino Library
-ClosedCube SHT31-D [Digital I2C] Humidity and Temperature Sensor Breakout 
+ClosedCube SHT31-D [Digital I2C] Humidity and Temperature Sensor Breakout
 
 Initial Date: 06-Oct-2015
 Last Updated: 12-Oct-2016
 
 Hardware connections for Arduino Uno:
 	VDD to 3.3V DC
-	SDA to A4
-	SCL to A5
+	SDA to D0
+	SCL to D1
 	GND to common ground
 
 MIT License
 
 */
 
-#include <Wire.h>
 #include <ClosedCube_SHT31D.h>
 
 ClosedCube_SHT31D sht31d;
@@ -25,10 +24,10 @@ void setup()
 {
 	Serial.begin(9600);
 	Serial.println("ClosedCube SHT31-D Periodic Mode Example");
-	
+
 	sht31d.begin(0x44);
 	Serial.print("sht31d Serial #");
-	Serial.println(sht31d.readSerialNumber());	
+	Serial.println(sht31d.readSerialNumber());
 
 	if (sht31d.periodicStart(REPEATABILITY_HIGH, FREQUENCY_10HZ) != NO_ERROR)
 		Serial.println("[ERROR] Cannot start periodic mode");

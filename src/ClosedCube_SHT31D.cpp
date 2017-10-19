@@ -1,5 +1,9 @@
 /*
 
+Particle Photon SHT-3X-DIS Library 
+
+ported from
+
 Arduino Library for Sensirion SHT3X-DIS Digital Humidity & Temperature Sensors
 Written by AA
 ---
@@ -27,8 +31,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 */
-#include <Wire.h>
-
+#include <Particle.h>
 #include "ClosedCube_SHT31D.h"
 
 ClosedCube_SHT31D::ClosedCube_SHT31D()
@@ -415,7 +418,7 @@ SHT31D_ErrorCode ClosedCube_SHT31D::read(uint16_t* data, uint8_t numOfPair)
 	}
 
 	for (counter = 0; counter < numOfPair; counter++) {
-		Wire.readBytes(buf, (uint8_t)2);
+		Wire.readBytes((char *)buf, (uint8_t)2);
 		checksum = Wire.read();
 
 		if (checkCrc(buf, checksum) != 0)

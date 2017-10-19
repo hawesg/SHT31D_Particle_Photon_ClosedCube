@@ -1,5 +1,9 @@
 /*
 
+Particle Photon SHT-3X-DIS Library
+
+ported from
+
 Arduino Library for Sensirion SHT3X-DIS Digital Humidity & Temperature Sensors
 Written by AA
 ---
@@ -31,7 +35,7 @@ THE SOFTWARE.
 #ifndef CLOSEDCUBE_SHT31D
 #define CLOSEDCUBE_SHT31D
 
-#include <Arduino.h>
+#include "application.h"
 
 typedef enum {
 	CMD_READ_SERIAL_NUMBER = 0x3780,
@@ -157,7 +161,7 @@ public:
 
 	SHT31D_ErrorCode heaterEnable();
 	SHT31D_ErrorCode heaterDisable();
-	
+
 	SHT31D_ErrorCode softReset();
 	SHT31D_ErrorCode generalCallReset();
 
@@ -206,4 +210,4 @@ private:
 };
 
 
-#endif 
+#endif

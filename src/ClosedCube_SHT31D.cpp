@@ -1,6 +1,6 @@
 /*
 
-Particle Photon SHT-3X-DIS Library 
+Particle Photon SHT-3X-DIS Library
 
 ported from
 
@@ -34,6 +34,8 @@ THE SOFTWARE.
 #include <Particle.h>
 #include "ClosedCube_SHT31D.h"
 
+using namespace SHT31D_CC;
+//namespace SHT31D_CC {
 ClosedCube_SHT31D::ClosedCube_SHT31D()
 {
 }
@@ -487,3 +489,4 @@ SHT31D ClosedCube_SHT31D::returnError(SHT31D_ErrorCode error) {
 	result.error = error;
 	return result;
 }
+//}

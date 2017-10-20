@@ -18,7 +18,7 @@ MIT License
 
 #include <ClosedCube_SHT31D.h>
 
-ClosedCube_SHT31D sht31d;
+SHT31D_CC::ClosedCube_SHT31D sht31d;
 
 void setup()
 {
@@ -32,14 +32,14 @@ void setup()
 
 void loop()
 {
-	printResult("ClockStrech Mode", sht31d.readTempAndHumidity(REPEATABILITY_LOW, MODE_CLOCK_STRETCH, 50));
+	printResult("ClockStrech Mode", sht31d.readTempAndHumidity(SHT31D_CC::REPEATABILITY_LOW, SHT31D_CC::MODE_CLOCK_STRETCH, 50));
   	delay(250);
-	printResult("Pooling Mode", sht31d.readTempAndHumidity(REPEATABILITY_HIGH, MODE_POLLING, 50));
+	printResult("Pooling Mode", sht31d.readTempAndHumidity(SHT31D_CC::REPEATABILITY_HIGH, SHT31D_CC::MODE_POLLING, 50));
 	delay(250);
 }
 
-void printResult(String text, SHT31D result) {
-	if (result.error == NO_ERROR) {
+void printResult(String text, SHT31D_CC::SHT31D result) {
+	if (result.error == SHT31D_CC::NO_ERROR) {
 		Serial.print(text);
 		Serial.print(": T=");
 		Serial.print(result.t);

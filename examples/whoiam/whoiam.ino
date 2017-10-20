@@ -18,7 +18,7 @@ MIT License
 
 #include <ClosedCube_SHT31D.h>
 
-ClosedCube_SHT31D sht31d;
+SHT31D_CC::ClosedCube_SHT31D sht31d;
 
 void setup()
 {

@@ -18,7 +18,7 @@ MIT License
 
 #include <ClosedCube_SHT31D.h>
 
-ClosedCube_SHT31D sht31d;
+SHT31D_CC::ClosedCube_SHT31D sht31d;
 
 void setup()
 {
@@ -29,7 +29,7 @@ void setup()
 	Serial.print("sht31d Serial #");
 	Serial.println(sht31d.readSerialNumber());
 
-	if (sht31d.periodicStart(REPEATABILITY_HIGH, FREQUENCY_10HZ) != NO_ERROR)
+	if (sht31d.periodicStart(SHT31D_CC::REPEATABILITY_HIGH, SHT31D_CC::FREQUENCY_10HZ) != SHT31D_CC::NO_ERROR)
 		Serial.println("[ERROR] Cannot start periodic mode");
 
 }
@@ -40,8 +40,8 @@ void loop()
 	delay(250);
 }
 
-void printResult(String text, SHT31D result) {
-	if (result.error == NO_ERROR) {
+void printResult(String text, SHT31D_CC::SHT31D result) {
+	if (result.error == SHT31D_CC::NO_ERROR) {
 		Serial.print(text);
 		Serial.print(": T=");
 		Serial.print(result.t);

@@ -19,7 +19,7 @@ MIT License
 
 #include <ClosedCube_SHT31D.h>
 
-ClosedCube_SHT31D sht31d;
+SHT31D_CC::ClosedCube_SHT31D sht31d;
 
 void setup()
 {
@@ -35,7 +35,7 @@ void setup()
 	Serial.print("Soft Reset return code: ");
 	Serial.println(resultSoft);
 
-	SHT31D_ErrorCode resultGeneral = sht31d.generalCallReset();
+	SHT31D_CC::SHT31D_ErrorCode resultGeneral = sht31d.generalCallReset();
 	Serial.print("General Call Reset return code: ");
 	Serial.println(resultGeneral);
 
